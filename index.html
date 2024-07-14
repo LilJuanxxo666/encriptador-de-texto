@@ -8,30 +8,31 @@
 </head>
 <body>
     <header class="encabezado_inicial">
-        <img src="./assets/Logo.png">
+        <img src="./assets/Logo.png" class="encabezado_inicial_imagen">
     </header>
     <main class="cuerpo">
         <section class="cuerpo_seccion_entrada">
             <div class="cuerpo_seccion_entrada_ingreso">
-                <input type="text" placeholder="Ingrese el texto aquí" class="cuerpo_ingresar_texto">
-                <p><img src="./assets/Vector.png">Solo letras minúsculas y sin acentos</p>
+                <textarea placeholder="Ingrese el texto aquí" class="cuerpo_ingresar_texto"></textarea>
             </div>
             <div class="cuerpo_seccion_entrada_boton">
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <p class="cuerpo_texto_vector"><img src="./assets/Vector.png" class="cuerpo_seccion_entrada_vector">Solo letras minúsculas y sin acentos</p>
+                <div class="cuerpo_botones">
+                    <button class="boton_encriptar">Encriptar</button>
+                    <button class="boton_desencriptar">Desencriptar</button>
+                </div>
             </div>
         </section>
         <section class="cuerpo_seccion_salida">
             <div class="cuerpo_seccion_salida_div">
-                <h1>Ningún mensaje fue encontrado</h1>
-                <p>el texto que desees encriptar o desencriptar.</p>
+                <h1>Ningún mensaje fue <br>encontrado</h1>
+                <p>El texto que desees encriptar o <br>desencriptar.</p>
             </div>
-            <img src="./assets/Muñeco.png">
+            <img src="./assets/Muñeco.png" class="cuerpo_imagen_muneco">
         </section>
         
     </main>
     <footer class="encabezado_final">
-
     </footer>
 </body>
 </html>
