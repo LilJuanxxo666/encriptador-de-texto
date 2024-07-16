@@ -28,20 +28,45 @@ body{
 .encabezado_inicial_imagen{
     height: 48px;
     width: 120px;
-    margin: 2.8%;
+    margin: 2.7%;
 }
+
+/* margin: 40px; */
 
 .cuerpo{
     display: flex;
-    justify-content: space-between;
-    gap: 80px;
+    justify-content: space-evenly;
 }
 
 .cuerpo_seccion_entrada{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 168px 0px 72px 240px;
+    justify-content: space-evenly;
+    margin: 11.6% 2.7% 5% 16.6%;
+}
+
+/* margin: 168px 0px 72px 240px; */
+.cuerpo_ingresar_texto{
+    background-color: var(--color-primario);
+    border: solid var(--color-primario);
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+/* width: 680px;
+height: 664px; */
+
+.cuerpo_ingresar_texto::placeholder{
+    color: var(--color-secundario);
+}
+
+.cuerpo_ingresar_texto:focus{
+    border: solid var(--color-primario);
+    outline: none;
+    color: var(--color-secundario);
 }
 
 .cuerpo_seccion_entrada_boton{
@@ -52,14 +77,9 @@ body{
 
 .cuerpo_texto_vector{
     display: flex;
-    font-size: 12px;
+    font-size: 0.75rem;
     justify-content: flex-start;
     gap: 5px;
-}
-
-.cuerpo_seccion_entrada_vector{
-    height: 16px;
-    width: 16px;
 }
 
 .cuerpo_botones{
@@ -76,6 +96,7 @@ body{
     border: var(--color-secundario) 1.5px solid;
     background-color: var(--color-secundario);
     color: var(--color-primario);
+    box-shadow: 1px 1px 20px var(--color-terciario);
 }
 
 .boton_encriptar:hover{
@@ -92,6 +113,7 @@ body{
     border: var(--color-secundario) 1.5px solid;
     background-color: var(--color-terciario);
     color: var(--color-secundario);
+    box-shadow: 1px 1px 20px var(--color-terciario);
 }
 
 .boton_desencriptar:hover{
@@ -100,38 +122,19 @@ body{
     color: var(--color-primario); 
 }
 
-.cuerpo_ingresar_texto{
-    background-color: var(--color-primario);
-    border: solid var(--color-primario);
-    font-family: var(--fuente-inter);
-    font-size: 2rem;
-    width: 680px;
-    resize: none;
-}
-
-.cuerpo_ingresar_texto::placeholder{
-    color: var(--color-secundario);
-}
-
-.cuerpo_ingresar_texto:focus{
-    border: solid var(--color-primario);
-    outline: none;
-    color: var(--color-secundario);
-}
-
 .cuerpo_seccion_salida{
     background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
     flex-direction: column-reverse;
     border-radius: 20px;
-    height: 944px;
-    width: 400px;
-    margin: 40px 40px 40px 0px;
+    padding: 17.2% 2.2% 17.2% 2.2%;
+    margin: 2.7%;
     gap: 20px;
+    box-shadow: 1px 1px 20px var(--color-terciario);
 }
+
+/* height: 944px;
+width: 400px; */
 
 .cuerpo_seccion_salida_div{
     display: flex;
@@ -143,4 +146,83 @@ body{
 .cuerpo_imagen_muneco{
     width: 336px;
     height: 304px;
+}
+
+.encabezado_final{
+    display: flex;
+    justify-content: center;
+}
+
+.encabezado_final a{
+    text-decoration: none;
+    font: bold 2px var(--color-secundario);
+}
+
+@media screen and (max-width: 375px){
+
+    .encabezado_inicial_imagen{
+        margin: 6.4% 4.2%;
+    }
+
+    .cuerpo{
+        flex-direction: column;
+    }
+    
+    .cuerpo_seccion_entrada{
+        margin: 40.5% 4.2% 8.5% 4.2%;
+    }
+
+    .cuerpo_ingresar_texto{
+        height: 282px;
+    }
+
+    .cuerpo_botones{
+        flex-direction: column;
+    }
+
+    .boton_encriptar{
+        width: 95.6%;
+    }
+
+    .boton_desencriptar{
+        width: 95.6%;
+    }
+
+    .cuerpo_seccion_salida{
+        margin: 8.5% 6.4% 10.6% 6.4%;
+        padding: 8.5%;
+    }
+    
+    .cuerpo_imagen_muneco{
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 768px) and (min-width: 376px){
+
+        .encabezado_inicial_imagen{
+            margin: 9.5% 5.2%;
+        }
+
+        .cuerpo{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .cuerpo_seccion_entrada{
+            margin: 32.5% 5.2% 8.3%;
+        }
+        
+        .cuerpo_ingresar_texto{
+            height: 572px;
+        }
+        
+        .cuerpo_seccion_salida{
+            margin-top: 0;
+            padding: 4.1%;
+        }
+        
+        .cuerpo_imagen_muneco{
+            display: none;
+        }  
 }
