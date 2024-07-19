@@ -2,14 +2,40 @@
 import {Encriptar} from "./models/Encriptar.js";
 import {UI} from "./models/UI.js";
 
+const ui = new UI();
+const encriptarDesencriptar = new Encriptar();
+
+function desencriptar(){
+    // @ts-ignore
+    let element = document.getElementById('texto_ingresado').value;
+    if(element == undefined || element == ""){
+        ui.mostrarTextoInicial();   
+    }else{
+        ui.mostrarTextoConvertido(encriptarDesencriptar.desencriptarTexto(element));
+    }
+}
+
+function encriptar(){
+    // @ts-ignore
+    let element = document.getElementById('texto_ingresado').value;
+    if(element == undefined || element == ""){
+        ui.mostrarTextoInicial();   
+    }else{
+        ui.mostrarTextoConvertido(encriptarDesencriptar.encriptarTexto(element));
+    }
+}
+
+function botones(){
+    const botonEncriptar = document.getElementById('btn_encriptar');
+    const botonDesencriptar = document.getElementById('btn_desencriptar');
+    botonEncriptar?.addEventListener('click', () => encriptar());
+    botonDesencriptar?.addEventListener('click', () => desencriptar());
+}
+
+
 function main(){
-    const ui = new UI();
-    const encriptar = new Encriptar();
-
     ui.mostrarTextoInicial();
-
-    ui.mostrarTextoConvertido("Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original.");
-
+    botones();
 }
 
 main();

@@ -25,7 +25,7 @@ export class Encriptar {
      * 
      * @returns {String}
      */
-    encriptarTexto(texto = ""){
+    encriptarTexto(texto){
         return texto.split('').map(letra => {
             //Existe esa letra en el objeto?
             if (this.llavesEncriptar[letra]) {

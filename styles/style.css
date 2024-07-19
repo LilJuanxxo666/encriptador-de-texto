@@ -148,7 +148,7 @@ width: 400px; */
 
 .cuerpo_texto_encriptado{
     font-size: 1.5rem;
-    width: 23.3%;
+    width: 84%;
     height: 781px;
     background-color: white;
     border: solid white;
@@ -248,6 +248,7 @@ width: 400px; */
         margin-right: 32px;
         width: 85%;
         height: 100%;
+        padding: 0;
     }
 }
 
@@ -284,5 +285,6 @@ width: 400px; */
 
         .cuerpo_texto_encriptado{
             width: 85.6%;
+            padding: 0;
         }
 }
