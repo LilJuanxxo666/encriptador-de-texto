@@ -4,34 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+    <link rel="icon" href="./assets/Logo.png" type="image/png">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header class="encabezado_inicial">
-        <img src="./assets/Logo.png" class="encabezado_inicial_imagen">
+        <img src="./assets/Logo.png" class="encabezado_inicial_imagen" alt="logo alura latam">
     </header>
     <main class="cuerpo">
         <section class="cuerpo_seccion_entrada">
             <textarea placeholder="Ingrese el texto aquí" class="cuerpo_ingresar_texto"></textarea>
             <div class="cuerpo_seccion_entrada_boton">
-                <p class="cuerpo_texto_vector"><img src="./assets/Vector.png">Solo letras minúsculas y sin acentos</p>
+                <p class="cuerpo_texto_vector"><img src="./assets/Vector.png" alt="vector de advertencia">Solo letras minúsculas y sin acentos</p>
                 <div class="cuerpo_botones">
                     <button class="boton_encriptar">Encriptar</button>
                     <button class="boton_desencriptar">Desencriptar</button>
                 </div>
             </div>
         </section>
-        <section class="cuerpo_seccion_salida">
-            <div class="cuerpo_seccion_salida_div">
-                <h1>Ningún mensaje fue encontrado</h1>
-                <p>El texto que desees encriptar o desencriptar.</p>
-            </div>
-            <img src="./assets/Muñeco.png" class="cuerpo_imagen_muneco">
+        <section class="cuerpo_seccion_salida" id="cuerpo_seccion_salida">
         </section>
         
     </main>
     <footer class="encabezado_final">
         <p>Desarrollado por <a href="https://github.com/LilJuanxxo666">LilJuanxxo666</a></p>
     </footer>
+    <!-- script -->
+     <script src="./app.js" type="module"></script>
 </body>
 </html>
