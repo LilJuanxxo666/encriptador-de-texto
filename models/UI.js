@@ -25,7 +25,7 @@ export class UI {
         textareaSalida.style.height = 'auto';
         contenedorSalida.style.height = 'auto';
 
-        textareaSalida.style.height = (textareaSalida.scrollHeight + 2) + 'px';
+        textareaSalida.style.height = (textareaSalida.scrollHeight + 30) + 'px';
 
         //Ajustar la altura del contenedor al textarea
         contenedorSalida.style.height = textareaSalida.scrollHeight + 'px';
