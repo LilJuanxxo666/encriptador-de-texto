@@ -26,14 +26,18 @@ export class Encriptar {
      * @returns {String}
      */
     encriptarTexto(texto){
-        return texto.split('').map(letra => {
-            //Existe esa letra en el objeto?
-            if (this.llavesEncriptar[letra]) {
-              return this.llavesEncriptar[letra];
-            } else {
-              return letra;
-            }
-          }).join('');
+        if(texto == ""){
+            return "";
+        }else{
+            return texto.split('').map(letra => {
+                //Existe esa letra en el objeto?
+                if (this.llavesEncriptar[letra]) {
+                  return this.llavesEncriptar[letra];
+                } else {
+                  return letra;
+                }
+              }).join('');
+        }
     }
 
     /**
@@ -48,7 +52,7 @@ export class Encriptar {
         else if(texto.split(' ') == 1){
             for(let i = 0; i<claves.length ; i++){
                 if(texto.split(claves[i]).length > 0){
-                    texto = texto.replace(claves[i], this.llavesDesencriptar[claves[i]]);
+                    texto = texto.replace(new RegExp(claves[i], 'g'), this.llavesDesencriptar[claves[i]]);
                 }
             }
             return texto;
@@ -56,7 +60,8 @@ export class Encriptar {
             return texto.split(' ').map(palabra =>{
                 for(let i = 0; i<claves.length ; i++){
                     if(palabra.split(claves[i]).length > 0){
-                        palabra = palabra.replace(claves[i], this.llavesDesencriptar[claves[i]]);
+                        //Se usa la expresión regular global new RegExp(), debido a que /i/g no funciona por las ""
+                        palabra = palabra.replace(new RegExp(claves[i], 'g'), this.llavesDesencriptar[claves[i]]);
                     }
                 }
                 return palabra;

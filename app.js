@@ -32,7 +32,6 @@ function botones(){
     botonDesencriptar?.addEventListener('click', () => desencriptar());
 }
 
-
 function main(){
     ui.mostrarTextoInicial();
     botones();
